@@ -92,7 +92,7 @@
     "start:watch-components": "node scripts/generate-component-factory.js --watch",
     "build:client": "cross-env-shell PUBLIC_URL=$npm_package_config_sitecoreDistPath \"react-scripts build\"",
     "build:server": "cross-env-shell NODE_ENV=production \"webpack --config server/server.webpack.config.js\"",
-    "build:static": "jss clean && cross-env-shell node -r babel-register ./node_modules/webpack/bin/webpack --config ./build/webpack/webpack.static.js --color --progress --env.content=disconnected --env.publicPath=$npm_package_config_staticOutputPublicPath --env.production",   
+    "build:static": "jss clean && cross-env-shell node -r babel-register ./node_modules/webpack/bin/webpack --config ./build/webpack/webpack.static.js --color --progress --env.content=disconnected --env.publicPath=npm_package_config_sitecoreDistPath --env.production",   
     "bootstrap:connected": "node scripts/bootstrap.js",
     "bootstrap:disconnected": "node scripts/bootstrap.js --disconnected",
     "graphql:update": "node -r babel-register ./scripts/update-graphql-fragment-data.js",
